@@ -1,1 +1,4 @@
-console.log("hello world")
+import { Graphics } from "./graphics";
+
+console.log("hello world");
+test();
