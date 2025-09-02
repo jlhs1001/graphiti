@@ -20,10 +20,17 @@ module.exports = {
     path: path.resolve(__dirname, "public", "static", "bundle"),
   },
   devServer: {
+    // TODO: Fix reload issue
+    // hot: "only",
     static: {
       directory: path.join(__dirname, 'public'),
     },
     compress: true,
     port: 9000,
+    watchFiles: ["src/**/*", "public/**/*"],
+  },
+  watchOptions: {
+    ignored: ["**/node_modules"],
+    poll: 1000,
   }
 };
